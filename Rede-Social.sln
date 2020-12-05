@@ -1,15 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{E411876F-0FB9-4FA2-AE4E-F0510B64FB77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{E411876F-0FB9-4FA2-AE4E-F0510B64FB77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{D09F640B-1B2B-47B3-B143-46391D697B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{D09F640B-1B2B-47B3-B143-46391D697B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{540308A4-36DA-4853-9F9A-54BDBC09A90D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{540308A4-36DA-4853-9F9A-54BDBC09A90D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{EE2F303E-7F88-487C-82DD-AABE94C29809}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{EE2F303E-7F88-487C-82DD-AABE94C29809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client-app", "client-app", "{351B8CDC-1E6C-41EB-8187-BB454022A5A5}"
+	ProjectSection(SolutionItems) = preProject
+		client-app\.gitignore = client-app\.gitignore
+		client-app\package-lock.json = client-app\package-lock.json
+		client-app\package.json = client-app\package.json
+		client-app\README.md = client-app\README.md
+		client-app\tsconfig.json = client-app\tsconfig.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +28,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E411876F-0FB9-4FA2-AE4E-F0510B64FB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +78,11 @@ Global
 		{EE2F303E-7F88-487C-82DD-AABE94C29809}.Release|x64.Build.0 = Release|Any CPU
 		{EE2F303E-7F88-487C-82DD-AABE94C29809}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE2F303E-7F88-487C-82DD-AABE94C29809}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F1E1655-9DB3-415C-8EA0-03775404475B}
 	EndGlobalSection
 EndGlobal
