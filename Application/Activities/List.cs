@@ -1,6 +1,7 @@
 ﻿using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Persistence;
 using System;
 using System.Collections.Generic;
@@ -18,14 +19,15 @@ namespace Application.Activities
         {
             private readonly DataContext _context;
 
-            public Handler(DataContext context)
+            public Handler(DataContext context, ILogger<List> logger)
             {
                 this._context = context;
             }
 
             public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
             {
-                var activities = await _context.Activities.ToListAsync();
+
+                var activities = await _context.Activities.ToListAsync(cancellationToken);
 
                 return activities;
             }
