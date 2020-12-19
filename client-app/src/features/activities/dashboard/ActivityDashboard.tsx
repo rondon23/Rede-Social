@@ -33,7 +33,7 @@ export const ActivityDashboard: React.FC<IProps> = ({
                 activity={selectedActivity} 
                 setEditMode={setEditMode} 
                 setSelectedActivity={setSelectedActivity}/>)}
-                {editMode && <ActivityForm setEditMode={setEditMode}/>}
+                {editMode && <ActivityForm setEditMode={setEditMode} activity={selectedActivity!}/>}
             </Grid.Column>
         </Grid>
     )
