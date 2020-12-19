@@ -15,6 +15,8 @@ const App = () => {
     setSelectedActivity(activities.filter(a => a.id == id)[0])
   }
 
+  const [editMode, setEditMode] = useState(false);
+
   useEffect(() => {
     axios
       .get<IActivity[]>('http://localhost:5000/api/activities')
@@ -32,6 +34,8 @@ const App = () => {
       activities={activities} 
       selectActivity={handleSelectActivity}
       selectedActivity={selectedActivity}
+      editMode={editMode}
+      setEditMode={setEditMode}
       />
 
       </Container>
