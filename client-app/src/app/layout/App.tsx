@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import axios from 'axios'
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Icon, List } from 'semantic-ui-react'
 import { IActivity } from '../models/activity';
 import NavBar from '../../features/nav/NavBar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
+import agent from '../api/agent';
 
 
 const App = () => {
@@ -40,12 +40,11 @@ const App = () => {
   }
 
   useEffect(() => {
-    axios
-      .get<IActivity[]>('http://localhost:5000/api/activities')
+    agent.Activities.list()
       .then((response) => {
         let activities: IActivity[] = [];
 
-        response.data.forEach(activity => {
+        response.forEach((activity: any) => {
           activity.date = activity.date.split('.')[0];
           activities.push(activity);
         })
